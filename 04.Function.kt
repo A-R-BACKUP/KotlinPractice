@@ -30,9 +30,16 @@ fun plusFive(first : Int, second : Int = 5): Int {
 
 
 // - 반환값이 없는 함수 만들기
+// Unit을 붙이는 이유는 plusFive함수는 Return하지 않는다는 명령
+// Unit은 생략 가능
 fun printPlus(first : Int, second : Int): Unit {
     val c : Int = first + second
     println(c)
+}
+
+
+fun printPlus(first : Int, second : Int) {
+
 }
 
 
@@ -68,4 +75,15 @@ fun main(array: Array<String>){
     println("--result5--")
     println(result5)
 
+
+
+    //반환값이 없는 함수의 사용법
+    println()
+    println()
+    println()
+    println("No return Line")
+    printPlus(10,20)
+
 }
+
+// 메소드B 8분 3초까지..
