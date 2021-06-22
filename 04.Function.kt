@@ -12,13 +12,29 @@ package com.example.myapplication.Kotiln
 //}
 
 fun plus(first : Int, second: Int): Int {
+    println("--------")
+    println("first: " + first)
+    println("second: " + second)
+    println("--------")
+    println("")
+    println("Result")
     val result : Int = first + second
     return result
 }
 
 fun main(array: Array<String>){
+    // 함수를 호출하는 방법
+
     val result = plus(5, 10)
     println(result)
+    // 인수를 명시적으로 전달하는 방법
+
+
+    val result2 = plus(first = 20, second = 30)
+    println(result2)
+
+    val result3 = plus(second = 100, first = 10)
+    println(result3)
 }
 
 //7분 50초...
