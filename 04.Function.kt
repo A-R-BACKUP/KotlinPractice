@@ -11,20 +11,20 @@ package com.example.myapplication.Kotiln
 //          return 반환값
 //}
 
-fun plus(first : Int, second: Int): Int {
+fun plus(first: Int, second: Int): Int {
     println("--------")
     println("first: " + first)
     println("second: " + second)
     println("--------")
     println("")
     println("Result")
-    val a : Int = first + second
+    val a: Int = first + second
     return a
 }
 
 // - 디폴트 값을 갖는 함수 만들기
-fun plusFive(first : Int, second : Int = 5): Int {
-    val b : Int = first + second
+fun plusFive(first: Int, second: Int = 5): Int {
+    val b: Int = first + second
     return b
 }
 
@@ -32,18 +32,31 @@ fun plusFive(first : Int, second : Int = 5): Int {
 // - 반환값이 없는 함수 만들기
 // Unit을 붙이는 이유는 plusFive함수는 Return하지 않는다는 명령
 // Unit은 생략 가능
-fun printPlus(first : Int, second : Int): Unit {
-    val c : Int = first + second
+fun printPlus(first: Int, second: Int): Unit {
+    val c: Int = first + second
     println(c)
 }
 
 
-fun printPlus(first : Int, second : Int) {
-
+// - 반환값이 없는 함수 만들기 (2)
+fun printPlus2(first: Int, second: Int) {
+    val d: Int = first + second
+    println(d)
 }
 
 
-fun main(array: Array<String>){
+// - 간단하게 함수를 선언하는 방법
+fun plusShort(first: Int, second: Int) = first + second
+
+
+// - 가변인자를 갖는 함수 선언하는 방법
+fun plusMany(vararg numbers: Int) {
+    for(number in numbers) {
+        println(number)
+    }
+}
+
+fun main(array: Array<String>) {
     // 함수를 호출하는 방법
 
     val result = plus(5, 10)
@@ -61,8 +74,6 @@ fun main(array: Array<String>){
     println(result3)
 
 
-
-
     // 디폴트 값을 갖는 함수 호출하기
     println()
     println()
@@ -76,14 +87,23 @@ fun main(array: Array<String>){
     println(result5)
 
 
-
     //반환값이 없는 함수의 사용법
     println()
     println()
     println()
     println("No return Line")
-    printPlus(10,20)
+    printPlus(10, 20)
 
+
+    println()
+    println("plusShort result")
+    val result6 = plusShort(50, 50)
+    println(result6)
+
+    println()
+    println("plusMany")
+    plusMany(1, 2, 3)
+    plusMany(100)
 }
 
 // 메소드B 8분 3초까지..
