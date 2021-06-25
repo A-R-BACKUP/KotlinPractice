@@ -106,4 +106,4 @@ fun main(array: Array<String>) {
     plusMany(100)
 }
 
-// 메소드B 8분 3초까지..
+// 메소드B 8분 3초까지.
